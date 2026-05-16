@@ -850,6 +850,16 @@ export class ObserverComponent implements OnInit {
     this.changeDetectorRef.detectChanges();
   }
 
+  protected onMidMatchSwapPlayersTeams() {
+    this.midmatchVisible = false;
+    try {
+      this.electron.sendMidmatchEvent("swap_players_teams");
+    } catch (e) {
+      console.error("Failed to send midmatch Players Teams swap event", e);
+    }
+    this.changeDetectorRef.detectChanges();
+  }
+
   protected onSendToast() {
     if (!this.toastConfig.message || this.toastConfig.message.trim() === "") {
       this.toastStatusMessage = "Message Empty";

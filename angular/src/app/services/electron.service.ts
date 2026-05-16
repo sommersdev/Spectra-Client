@@ -176,7 +176,11 @@ export type Status = {
   statusType: StatusTypes;
   message: string;
 };
-export type MidMatchEventTypes = "toast" | "swap_left_right" | "swap_attacker_defender";
+export type MidMatchEventTypes =
+  | "toast"
+  | "swap_left_right"
+  | "swap_attacker_defender"
+  | "swap_players_teams";
 export type IToastInfo = {
   duration: number | null;
   message: string;

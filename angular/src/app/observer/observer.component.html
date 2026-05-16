@@ -157,7 +157,7 @@
     </div>
     <div class="flex flex-col gap-3">
       <p class="text-md w-full text-center">
-        The following two options should only be used as a last resort.
+        The following options should only be used as a last resort.
         <br />Always ensure you set all options properly before connecting.
       </p>
       <p-button
@@ -177,6 +177,15 @@
         severity="primary"
         [loading]="tryingToConnect"
         (onClick)="onMidMatchSwapLR()"
+      />
+      <p-button
+        fluid
+        label="Swap Teams with Players"
+        icon="pi pi-arrows-h"
+        class="w-full"
+        severity="primary"
+        [loading]="tryingToConnect"
+        (onClick)="onMidMatchSwapPlayersTeams()"
       />
     </div>
   </div>
