@@ -40,7 +40,7 @@ export class RoundwinboxComponent implements Validatable, AfterContentInit {
   data!: RoundWinBox;
 
   @Input({ required: false })
-  isSupporter: boolean = true;
+  isSupporter: boolean = false;
 
   roundWinBoxTeams = ["all", "left", "right"];
   roundWinBoxroundCeremony = ["all", "normal", "ace", "clutch", "teamAce", "flawless", "thrifty"];
